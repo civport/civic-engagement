@@ -17,8 +17,8 @@ import RepVoteStats from './repVoteStats';
 import RepVoteStatsLineGraph from './repVoteStatsLineGraph';
 import RepVoteStatsDoughnut from './repVoteStatsDoughnut';
 
-import { bio, bills, votes } from '../actions/politicianSearchActions';
-import testing from '../actions/locationBarActions';
+import { bio, bills, votes } from '../../actions/politicianSearchActions';
+import testing from '../../actions/locationBarActions';
 
 // import { Propublica, testReps } from './defaultProps';
 
@@ -77,7 +77,7 @@ class RepDisplay extends Component {
 
     // create a component-generating function for the grommet-box component
     // to avoid repeating property assignments
-    const BoxCreator = component => (
+    const BawksCreator = component => (
       <Box
         align='center'
         pad='small'
@@ -97,16 +97,19 @@ class RepDisplay extends Component {
             justify='center'
             full={true}
           >
-            { BoxCreator(
+            {BawksCreator(
               <RepBio
                 key={shortid.generate()}
                 bio={propublica[this.state.current]}
                 google={rep}
-              />)
-            };
-            { BoxCreator(<RepVoteStatsLineGraph rep={propublica[this.state.current]} />) }
-            { BoxCreator(<RepVoteStats rep={propublica[this.state.current]} />) }
-            }
+              />
+            )}
+            {BawksCreator(
+              <RepVoteStatsLineGraph rep={propublica[this.state.current]} />
+            )}
+            {BawksCreator(
+              <RepVoteStats rep={propublica[this.state.current]} />
+            )}
           </Box>
         ) : (
             <Box
