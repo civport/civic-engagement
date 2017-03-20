@@ -45,3 +45,10 @@ client/dist/
 client/debug.js
 client/components/defaultProps.js
 .vscode
+
+# Elastic Beanstalk Files
+
+.elasticbeanstalk/
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
