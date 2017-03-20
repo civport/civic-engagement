@@ -10,7 +10,10 @@ const iconUrls = [
 ];
 
 const HeaderContainer = () => (
-  <Header style={{ paddingLeft: '130px', paddingBottom: '40px' }} headerIcons={iconUrls} />
+  <Header
+    // style={{ paddingLeft: '130px', paddingBottom: '40px' }}
+    headerIcons={iconUrls}
+  />
 );
 
 export default HeaderContainer;
