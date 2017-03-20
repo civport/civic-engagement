@@ -19,10 +19,8 @@ import RepVoteStatsDoughnut from './repVoteStatsDoughnut';
 import { bio, bills, votes } from '../../actions/politicianSearchActions';
 import testing from '../../actions/locationBarActions';
 
-// import { Propublica, testReps } from './defaultProps';
-
 /* this component will need a location
- * already searched and seeded into app state */
+   already searched and seeded into app state */
 class RepDisplay extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +28,6 @@ class RepDisplay extends Component {
     this.state = {
       current: null
     };
-    console.log(props);
     // fire off propublica actions
     this.props.reps.forEach(({ name }) => {
       this.props.bio(name);
@@ -41,14 +38,11 @@ class RepDisplay extends Component {
     this.handleClick = this.handleClick.bind(this);
 
     setTimeout(() => {
-      // this.setState({ current: this.props.reps[0].name });
       this.handleClick(this.props.reps[0].name);
-      // console.log('remove spinner: ', this.props.reps[0].name);
     }, 1000);
   }
 
   handleClick(current) {
-    // console.log(current);
     if (this.state.current !== current) {
       this.setState({ current });
     }
