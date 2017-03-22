@@ -1,4 +1,4 @@
-.landing-searchbar {
+.home-searchbar {
   min-width: 375px;
   input {
     min-width: 375px;
@@ -6,34 +6,34 @@
   }
 }
 
-.landing-toggle {
+.home-toggle {
   // background-color: grey;
 }
 
-.landing-panel2 {
+.home-panel2 {
   min-height: 300px;
   padding: 30px;
 }
 
-.landing-team {
+.home-team {
   min-height: 400px;
 }
 
-.landing-team-header, .landing-bio-name {
+.home-team-header, .home-bio-name {
   font-weight: 500;
 }
 
-.landing-team-header {
+.home-team-header {
   padding-top: 10px;
 }
 
-.landing-bio-img {
+.home-bio-img {
   height: 200px;
   width: 200px;
   border-radius: 100px;
 }
 
-.landing-bio-container {
+.home-bio-container {
   width: 100%;
   max-width: 1200px;
   align-items: center;
@@ -49,7 +49,7 @@
   filter: blur(5px);
 }
 
-.landing-main-nav {
+.home-main-nav {
   // header {
     display: flex;
     align-content: center;
@@ -61,7 +61,7 @@
   // }
 }
 
-.landing-login-header {
+.home-login-header {
     justify-content: center;
     height: 100%;
     width: 100%;

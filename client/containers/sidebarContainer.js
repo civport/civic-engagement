@@ -1,6 +1,5 @@
 import React from 'react';
 import HeaderContainer from '../containers/headerContainer';
-import Menu from '../components/sidebar';
 import ResultsComp from './reqContainer';
 import Header from 'grommet/components/Header';
 
@@ -26,7 +25,7 @@ class SidebarContainer extends React.Component {
   render() {
     return (
       <div>
-          <Header className="landing-main-nav" style={{ marginLeft: '40px'}}size="small" float={false} fixed={true}>
+          <Header className="home-main-nav" style={{ marginLeft: '40px'}}size="small" float={false} fixed={true}>
             <HeaderContainer />
           </Header>
           <ResultsComp />

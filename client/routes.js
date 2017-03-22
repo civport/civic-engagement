@@ -1,29 +1,20 @@
 import React from 'react';
 import { Route, IndexRoute, Link } from 'react-router';
-import Axios from 'axios';
-// import ReqContainer from './containers/ReqContainer'
-import Req from './src/req';
-
-// import MapContainer from './containers/GoogleMapContainer';
-import LocationBar from './components/locationBar';
+// import Axios from 'axios';
+import LocationBar from './components/news/locationBar';
 import MenuContainer from './containers/sidebarContainer';
-import MapContainer from './containers/GoogleMapContainer';
-import Dashboard from './components/dashboard';
-import News from './components/newsList';
+import MapContainer from './components/events/eventsMap';
+import Events from './components/events/eventsDisplay';
+import News from './components/news/newsList';
 import PageNotFound from './components/PageNotFound';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Auth from './components/Auth';
-import Top20 from './components/Top20Wrapper';
+import Login from './components/profile/Login';
+import Signup from './components/profile/Signup';
+import Auth from './components/profile/Auth';
+import Top20 from './components/charts/top20Wrapper';
 import HeaderContainer from './containers/headerContainer';
-import Landing from './components/Landing';
-// import MapContainer from './containers/GoogleMapContainer';
-// import LocationBar from './components/locationBar';
-// import MenuContainer from './containers/sidebarContainer';
-
+import HomePage from './components/Landing';
 import CongressContainer from './containers/congressMembersContainer';
 
-  // <Route path="map" component={MapContainer} />
 const home = function home() {
   return (<div>
     <h1>welcome to the home page!</h1>
@@ -33,7 +24,7 @@ const home = function home() {
     <br />
     <Link to="/news">News</Link>
     <br />
-    <Link to="/dashboard">Dashboard</Link>
+    <Link to="/events">Events</Link>
     <br />
     <Link to="/header">Header</Link>
     <br />
@@ -49,23 +40,22 @@ const home = function home() {
   </div>);
 };
 
-const testing = function testing() {
-  return (<div>
-    <h1>Testing</h1>
-    <Link to="/header">Header</Link>
-  </div>);
-};
+// const testing = function testing() {
+//   return (<div>
+//     <h1>Testing</h1>
+//     <Link to="/header">Header</Link>
+//   </div>);
+// };
 
 export default (
   <Route path="/" >
-    <IndexRoute component={Landing} />
-    <Route path="req" component={Req} />
+    <IndexRoute component={HomePage} />
     <Route path="location" component={LocationBar} />
     <Route path="map" component={MapContainer} />
     <Route path="menuAnd" component={MenuContainer} />
     <Route path="news" component={News} />
-    <Route path="dashboard" component={Dashboard} />
-    <Route path="testing" component={testing} />
+    <Route path="events" component={Events} />
+    {/* <Route path="testing" component={testing} /> */}
     <Route path="login" component={Login} />
     <Route path="signup" component={Signup} />
     <Route path="auth" component={Auth} />

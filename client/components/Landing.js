@@ -32,12 +32,6 @@ class Landing extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  toggleVisibility() {
-    this.setState({
-      searchVisibility: true
-    });
-  }
-
   onInputChange(event) {
     console.log(event.target.value);
     this.setState({ input: event.target.value });
@@ -47,13 +41,18 @@ class Landing extends Component {
     event.preventDefault();
     this.props.meetupSearch(this.state.input);
     this.props.locationSearch(this.state.input);
-    this.context.router.push('/dashboard');
+    this.context.router.push('/events');
   }
 
+  toggleVisibility() {
+    this.setState({
+      searchVisibility: true
+    });
+  }
 
   render() {
     return (
-      <Article scrollStep={true}>
+      <Article scrollStep={false}>
         <Header size="small" float={false} fixed={true}>
           <Box direction="row" align="center" pad={{ between: "small" }} className="landing-login-header">
             <Button label="Login" href="/login" path="login" />
@@ -107,17 +106,17 @@ class Landing extends Component {
           </Heading>
           <Box direction="row" size="full" pad={{ between: 'large' }} className="landing-bio-container">
             <Box pad={{ between: 'small' }}>
-              <img src={'../media/nino.jpg'} className="landing-bio-img"/>
+              <img src={'../media/nino.jpg'} className="landing-bio-img" />
               <Heading tag="h3" className="landing-bio-name">Nino Rekhviashivili</Heading>
               <h4>Fullstack Developer</h4>
             </Box>
             <Box pad={{ between: 'small' }}>
-              <img src={'../media/kevin.jpg'} className="landing-bio-img"/>
+              <img src={'../media/kevin.jpg'} className="landing-bio-img" />
               <Heading tag="h3" className="landing-bio-name">Kevin Fung</Heading>
               <h4>Fullstack Developer</h4>
             </Box>
             <Box pad={{ between: 'small' }}>
-              <img src={'../media/rishi.jpg'} className="landing-bio-img"/>
+              <img src={'../media/rishi.jpg'} className="landing-bio-img" />
               <Heading tag="h3" className="landing-bio-name">Rishi Shah</Heading>
               <h4>Fullstack Developer</h4>
             </Box>
@@ -129,7 +128,7 @@ class Landing extends Component {
       </Article>
     );
   }
- }
+}
 
 Landing.contextTypes = {
   router: PropTypes.object
