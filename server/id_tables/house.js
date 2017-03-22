@@ -1,7 +1,6 @@
 // rep = house.results[0].members[i];
 
 module.exports = {
-  "Robert Aderholt": "A000055",
   "Robert B. Aderholt": "A000055",
   "Justin Amash": "A000367",
   "Mark Amodei": "A000369",
@@ -196,6 +195,7 @@ module.exports = {
   "Vicente Gonzalez": "G000581",
   "Jenniffer González-Colón": "G000582",
   "Josh Gottheimer": "G000583",
+
   "Alcee Hastings": "H000324",
   "Alcee L. Hastings": "H000324",
   "Steny Hoyer": "H000874",
